@@ -1,6 +1,6 @@
 ---
 title: Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
-feature_image: ![Exploration_of_Neural_Networks_SwissCognitive_The_Global_AI_Hub](https://github.com/hulicheng117/capstone_website/assets/97436268/1cfdd026-febb-4d40-8c76-9ffc76c75ade)
+feature_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiixXM0imtdkyBvBQRG5oSLEXouTXveD7y2N13pP0l1ObEyBG2bLNr6GIBB0ALPi3WfX4&usqp=CAU"
 
 ---
 
