@@ -121,12 +121,12 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 
 # 9. Site navigation
 navigation_header:
-- title: Project Home
-   url: https://hulicheng117.github.io/capstone_website/
+# - title: Project Home
+#    url: https://hulicheng117.github.io/capstone_website/
 - title: Github Repo
   url: https://github.com/KULcoder/DSC180
-- title: Team
-  url: /team/
+# - title: Team
+#   url: /team/
 
 # - title: Blog
 #   url: /blog/
