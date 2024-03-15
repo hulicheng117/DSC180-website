@@ -1,5 +1,5 @@
 ---
-title: Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
+title: New Initialization Mechanisms for Convolutional Neural Networks
 feature_image: "https://www.world-wide.org/images/dl.jpg"
 
 ---
