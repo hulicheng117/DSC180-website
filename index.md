@@ -6,8 +6,11 @@ author: Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
 ---
 <div style="text-align:center">
     Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
-    
 </div>
+
+
+<a href="https://github.com/KULcoder/DSC180">Github repo</a>
+<a href="assets/report.pdf">Report</a>
 
 ### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
