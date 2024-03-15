@@ -1,93 +1,104 @@
----
-title: About Alembic
-feature_text: |
-  ## Alembic
-  A Jekyll boilerplate theme designed to be a starting point for any Jekyll website
-feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
----
+## Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
 
-Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get rolling immediately. Install it, configure it, tweak it, push it.
+### Introduction
+Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
+showcasing exceptional problem-solving and data interpretation capabilities. As a neural net-
+works increasingly outperform traditional algorithms, it becomes crucial to unravel their
+complex learning mechanisms.
+Previous studies Beaglehole et al. (2023) and Radhakrishnan et al. (2023) formulated Convolutional Neural Feature Ansatz, demonstrating that features selected by convolutional
+networks can be recovered by computing the average gradient outer product (AGOP) of
+the trained network with respect to image patches given by empirical covariance matrices
+of filters at any given layer. Concurrently, these investigations identified an Average Gradient
+Outer Product (AGOP) and Neural Feature Matrix (NFM) as key elements characterizing
+feature learning in neural networks.
+Meanwhile, another critical aspect of deep learning that influences neural network performance-
+mance and convergence is the method of initialization. Proper Initialization is crucial; due
+to the use of backpropagation in neural networks, improper initialization can lead to the
+vanishing or exploding gradient problem, thereby affecting the overall training process.
+Our study aims to combine the concepts of NFM and AGOP with initialization methods.
+This exploration seeks to address the question: How does the application of the Neural
+Feature Matrix and Average Gradient Outer Product as initialization affect the performance of neural networks?
 
-{% include button.html text="Fork it" icon="github" link="https://github.com/daviddarnes/alembic" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://buymeacoffee.com/daviddarnes#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&via=DavidDarnes" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %}
+### Feature Learning with NFM(Neural Feature Matrix) and AGOP(Average Gradient Outer Product)
+* __The Neural Feature Matrix (NFM)__ is the neural feature matrix resulting from multiplying model’s weight matrices.
+* __The Average Gradient Outer Product (AGOP)__ is the average gradient outer product over patches, it is the gradient
+with respect to that patch average over data.
+* Previous studies posit the __Convolutional Neural Feature Ansatz__ [1], which states that there is a positive correlation between AGOP and NFM.
+<div style="text-align:center">
 
-## Features
+  <img width="392" alt="Screenshot 2024-03-14 at 4 24 55 PM" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/16575623-71e9-4c79-9173-223ed5f84a0e">
 
-- Available as a **theme gem** and **GitHub Pages** theme
-- Clear and elegant design that can be used out of the box or as solid starting point
-- Tested in all major browsers, including **IE and Edge**
-- Built in **Service Worker** so it can work offline and on slow connections
-- **Configurable colours** and typography in a single settings file
-- Extensive set of **shortcodes** to include various elements; such as buttons, icons, figure images and more
-- Solid **typographic framework** from [Sassline](https://sassline.com/)
-- Configurable navigation via a single file
-- Modular Jekyll components
-- Post category support in the form of a single post index page grouped by category
-- Built in live search using JavaScript
-- **Contact form** built in using [Formspree](https://formspree.io/)
-- Designed with **[Siteleaf](https://www.siteleaf.com/)** in mind
-- Has 9 of the most popular networks as performant sharing buttons
-- Has documentation
+</div>
 
-## Examples
+* The significance of AGOP and NFM is highlighted by findings suggesting that
+these measures, of early layers, perform operations similar to edge detection.
+As shown in Figure 1, Patch-AGOPs and NFMs from pre-trained VGG11
+identified edges in images and progressively highlighted regions of images
+used for prediction
 
-Here are a few examples of Alembic out in the wild being used in a variety of ways:
+![output](https://github.com/hulicheng117/DSC180-website/assets/97436268/028ffef0-678c-4c64-be47-34bccf7a6d29)
 
-- [bawejakunal.github.io](https://bawejakunal.github.io/)
-- [case2111.github.io](https://case2111.github.io/)
-- [karateca.org](https://www.karateca.org/)
+### Dataset
+To investigate the application of the Neural Feature Matrix (NFM) and Average Gradient Outer Product (AGOP) as initialization methods, we will be examining their performance across four different datasets: SVHN, CIFAR-10, CIFAR-100, and Tiny ImageNet.
+* __SVHN__ (Street View House Numbers) is a dataset that contains a total of 600,000 digit images from Google Street View. Each image is of the size 32x32 pixels in size.
+* __CIFAR-10__ (Canadian Institute for Advanced Research, 10 classes) consists of 60000 32x32 color images in 10 classes, with 6000 images per class.     
+* __CIFAR-100__ (Canadian Institute for Advanced Research, 100 classes) is an extension of CIFAR-10. Instead of 10 classes, it has 100 classes.
+* __Tiny-Imagenet__ is a subset of the ImageNet dataset. It contains 100000 images of 200 classes (500 for each class) downsized to 64×64 colored images 
 
-## Installation
+### Methods Overview
+ * __Model__: We used a VGG11 model which has 8 convolutional layers followed by 3 fully connected layers.
+    - __Method__: Investigate the performance of AGOP and NFM initialization compared to other common initializations by examining accuracy and loss.
+    - __Initialization Methods__:
+        - __Normal__:  extract weights from a normal distribution.
+        - __Uniform__: extract weights from a uniform distribution.
+        - __AGOP and NFM__:  We use the pre-trained model from PyTorch to extract AGOP and NFM, and use these as the covariant matrix to generate a multivariate Gaussian for sampling weights for initialization.
+        - __Kaiming__: Kaiming initialization[2] is one of the most effective methods for initializing convolutional layer weights, it is also the default initialization method for Conv2d in PyTorch. The method changes the parameters (e.g. std for normal, range for uniform, covariance matrix NFM) of the distribution based on layer width and the type of activation function.
+  * __Experiment and Hyper-parameters__: Using the VGG11 architecture, we investigated the performance of AGOP and NFM initialization methods on model training. We employed SGD with a learning rate of 0.001 and cross-entropy loss. The goal was to control initialization methods as the only variable.
 
-### Quick setup
 
-To give you a running start I've put together some starter kits that you can download, fork or even deploy immediately:
 
-- ⚗️🍨 Vanilla Jekyll starter kit  
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-kit){:style="background: none"}
-- ⚗️🌲 Forestry starter kit  
-  [![Deploy to Forestry](https://assets.forestry.io/import-to-forestry.svg)](https://app.forestry.io/quick-start?repo=daviddarnes/alembic-forestry-kit&engine=jekyll){:style="background: none"}  
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-forestry-kit){:style="background: none"}
-- ⚗️💠 Netlify CMS starter kit  
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-netlifycms-kit&stack=cms){:style="background: none"}
+### Training graphs
+![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/00c1f9ae-8ab3-4576-91a7-865046e19f9f)
+<div style="text-align:center">
+   <img style="text-align:center" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c">
+</div>
 
-- ⚗️:octocat: GitHub Pages with remote theme kit  
-  {% include button.html text="Download kit" link="https://github.com/daviddarnes/alembic-kit/archive/remote-theme.zip" color="#24292e" %}
-- ⚗️🚀 Stackbit starter kit  
-  [![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/daviddarnes/alembic-stackbit-kit){:style="background: none"}
 
-### As a Jekyll theme
+In our training graph we can see both training and validation accuarcy of Kaiming_NFM outperform the Kaiming_uniform which is the default initialization
+method used in pytorch on CIFAR-100. We also ploted the difference of validation loss and training loss for each initialization method acrossed training process. When the difference is negative, the validation loss is lower than the training loss. This can be a sign of underfitting, meaning the model is not capturing the underlying trends in the training data enough. When the difference is positive (above 0 on the y-axis), the validation loss is higher than the training loss and indicate overfitting. From the graph, our initialization method of agop and nfm showed robust to overfit than other initialization
+method and Kaiming_nfm also outperformed among all initialization methods with Kaiming initialization scaling.
 
-1. Add `gem "alembic-jekyll-theme"` to your `Gemfile` to add the theme as a dependancy
-2. Run the command `bundle install` in the root of project to install the theme and its dependancies
-3. Add `theme: alembic-jekyll-theme` to your `_config.yml` file to set the site theme
-4. Run `bundle exec jekyll serve` to build and serve your site
-5. Done! Use the [configuration](#configuration) documentation and the example [`_config.yml`](https://github.com/daviddarnes/alembic/blob/master/_config.yml) file to set things like the navigation, contact form and social sharing buttons
 
-### As a GitHub Pages remote theme
 
-1. Add `gem "jekyll-remote-theme"` to your `Gemfile` to add the theme as a dependancy
-2. Run the command `bundle install` in the root of project to install the jekyll remote theme gem as a dependancy
-3. Add `jekyll-remote-theme` to the list of `plugins` in your `_config.yml` file
-4. Add `remote_theme: daviddarnes/alembic@main` to your `_config.yml` file to set the site theme
-5. Run `bundle exec jekyll serve` to build and serve your site
-6. Done! Use the [configuration](#configuration) documentation and the example [`_config.yml`](https://github.com/daviddarnes/alembic/blob/master/_config.yml) file to set things like the navigation, contact form and social sharing buttons
+### Results and Conclusions
+<div style="text-align:center">
+  
+  <img width="1060" alt="table" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/5bf39188-7d30-41f0-ad64-5a5ea304d88d">
+</div>
 
-### As a Boilerplate / Fork
 
-_(deprecated, not recommended)_
+NFM initialization outperformed all other initialization methods, achieving the highest validation accuracy across all the datasets. With Kaiming NFM, in particular, achieving remarkable results in 3 of the 4 datasets. It was able to attain highest validation accuracies of 93.23% on SVHN, 48.33% on CIFAR100, and 33.78% on Tiny-ImageNet. 
 
-1. [Fork the repo](https://github.com/daviddarnes/alembic#fork-destination-box)
-2. Replace the `Gemfile` with one stating all the gems used in your project
-3. Delete the following unnecessary files/folders: `.github`, `LICENSE`, `screenshot.png`, `CNAME` and `alembic-jekyll-theme.gemspec`
-4. Run the command `bundle install` in the root of project to install the jekyll remote theme gem as a dependancy
-5. Run `bundle exec jekyll serve` to build and serve your site
-6. Done! Use the [configuration](#configuration) documentation and the example [`_config.yml`](https://github.com/daviddarnes/alembic/blob/master/_config.yml) file to set things like the navigation, contact form and social sharing buttons
+Our initialization methods can be viewed as a soft way of transferring learning. We used the pre-trained model on ImageNet and train the model on simpler datasets. It is worth investigating what if we initialize with model pre-trained on simpler datasets and train on more complex datasets. Some other potential areas of improvement include:
 
-## Customising
+  - Perform hyperparameter tuning to obtain the best performance of each method.
+  - Try to repeat training the model and extracting AGOP/NFM to see if it can improve the performance.
+  - Try to expand the method to transformers.
 
-When using Alembic as a theme means you can take advantage of the file overriding method. This allows you to overwrite any file in this theme with your own custom file, by matching the file name and path. The most common example of this would be if you want to add your own styles or change the core style settings.
 
-To add your own styles copy the [`styles.scss`](https://github.com/daviddarnes/alembic/blob/master/assets/styles.scss) into your own project with the same file path (`assets/styles.scss`). From there you can add your own styles, you can even optionally ignore the theme styles by removing the `@import "alembic";` line.
+### Acknowledgement and References
+- We would like thank our mentors, Misha Belkin, Yian Ma, for their invaluable
+guidance and support throughout this project.
+- Special thanks to Daniel Beaglehole for his guidance.His insights have been
+instrumental in shaping the success of this project.
+- Special thanks to Licheng’s pet, Xiaohei, for providing her picture for our
+visualization.
 
-If you're looking to set your own colours and fonts you can overwrite them by matching the variable names from the [`_settings.scss`](https://github.com/daviddarnes/alembic/blob/master/_sass/_settings.scss) file in your own `styles.scss`, make sure to state them before the `@import "alembic";` line so they take effect. The settings are a mixture of custom variables and settings from [Sassline](https://medium.com/@jakegiltsoff/sassline-v2-0-e424b2881e7e) - follow the link to find out how to configure the typographic settings.
+[1] Daniel Beaglehole, Adityanarayanan Radhakrishnan, Parthe Pandit, and Mikhail Belkin. Mechanism of feature learning in convolutional neural networks, 2023.
+
+[2] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Delving deep into rectifiers: Surpassing human-level performance on imagenet classification, 2015.
+
+[3] Adityanarayanan Radhakrishnan, Daniel Beaglehole, Parthe Pandit, and Mikhail Belkin.Mechanism for feature learning in neural networks and backpropagation free machine learning models. Science, 0(0).
+
+
+
