@@ -123,8 +123,11 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 navigation_header:
 - title: Project Home
   url: https://hulicheng117.github.io/capstone_website/
+- title: Github Repo
+  url: https://github.com/KULcoder/DSC180
 - title: Team
   url: https://hulicheng117.github.io/Capstone/
+
 # - title: Blog
 #   url: /blog/
 # - title: Categories
@@ -137,11 +140,12 @@ navigation_header:
 navigation_footer:
 - title: Created by Licheng Hu
   url: https://hulicheng117.github.io/capstone_website/
+  
 
-social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+# social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
 #   Twitter: https://twitter.com/DavidDarnes
 #   LinkedIn: https://www.linkedin.com/in/daviddarnes
-GitHub: https://github.com/KULcoder/DSC180
+# GitHub: https://github.com/KULcoder/DSC180
 #   link: https://darn.es
 #   RSS: /feed.xml
 
