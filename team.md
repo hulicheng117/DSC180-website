@@ -1,3 +1,7 @@
+---
+layout：page
+---
+
 ## Mentor
 * Mikhail Belkin
 * Yian Ma
