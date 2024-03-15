@@ -1,7 +1,7 @@
 ---
+layout: page
 title: Team
 feature_image: "https://www.world-wide.org/images/dl.jpg"
-
 ---
 
 ## Mentor
