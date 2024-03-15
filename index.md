@@ -119,8 +119,6 @@ learning models are pivotal.
 guidance and support throughout this project.
 - Special thanks to Daniel Beaglehole for his guidance.His insights have been
 instrumental in shaping the success of this project.
-- Special thanks to Licheng’s pet, Xiaohei, for providing her picture for our
-visualization.
 
 [1] Daniel Beaglehole, Adityanarayanan Radhakrishnan, Parthe Pandit, and Mikhail Belkin. Mechanism of feature learning in convolutional neural networks, 2023.
 
