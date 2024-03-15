@@ -29,8 +29,7 @@ Feature Matrix and Average Gradient Outer Product as initialization affect the p
 with respect to that patch average over data.
 * Previous studies posit the __Convolutional Neural Feature Ansatz__ [1], which states that there is a positive correlation between AGOP and NFM.
 <div style="text-align:center">
-
-  <img width="392" alt="Screenshot 2024-03-14 at 4 24 55 PM" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/16575623-71e9-4c79-9173-223ed5f84a0e">
+    <img width="392" alt="Screenshot 2024-03-14 at 4 24 55 PM" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/b66bdc60-9053-4b5c-921d-8361693e0ca6">
 
 </div>
 
@@ -40,7 +39,8 @@ As shown in Figure 1, Patch-AGOPs and NFMs from pre-trained VGG11
 identified edges in images and progressively highlighted regions of images
 used for prediction
 
-![output](https://github.com/hulicheng117/DSC180-website/assets/97436268/028ffef0-678c-4c64-be47-34bccf7a6d29)
+![output](https://github.com/hulicheng117/DSC180-website/assets/97436268/eb8d1da0-e817-4e4c-bbdb-fdccec8fe652)
+
 
 ### Dataset
 To investigate the application of the Neural Feature Matrix (NFM) and Average Gradient Outer Product (AGOP) as initialization methods, we will be examining their performance across four different datasets: SVHN, CIFAR-10, CIFAR-100, and Tiny ImageNet.
@@ -62,10 +62,11 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 
 
 ### Training graphs
-![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/00c1f9ae-8ab3-4576-91a7-865046e19f9f)
+![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/8e934d9d-6f8f-4f29-be9f-0b8f1a5777f1)
 <div style="text-align:center">
-   <img style="text-align:center" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c">
+   <img style="text-align:center" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/7def6247-30fa-4ee8-ac41-882ee93613fa">
 </div>
+
 
 
 In our training graph we can see both training and validation accuarcy of Kaiming_NFM outperform the Kaiming_uniform which is the default initialization
