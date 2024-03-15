@@ -77,7 +77,7 @@ method and Kaiming_nfm also outperformed among all initialization methods with K
 
 ### Results and Conclusions
 <div style="text-align:center">
-  <img width="1060" alt="table" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/bfdd938d-474d-4c0f-869a-bf3f855441a3">
+      <img width="1060" alt="table" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/bfdd938d-474d-4c0f-869a-bf3f855441a3">
 </div>
 
 
