@@ -1,6 +1,5 @@
 ---
 title: Team
-feature_image: "https://www.world-wide.org/images/dl.jpg"
 layout: team
 aside: true
 ---
