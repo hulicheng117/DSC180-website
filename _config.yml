@@ -125,8 +125,8 @@ navigation_header:
 #   url: /index/
 - title: Github Repo
   url: https://github.com/KULcoder/DSC180
-# - title: Team
-#   url: /team/
+- title: Team
+  url: /team/
 
 # - title: Blog
 #   url: /blog/
