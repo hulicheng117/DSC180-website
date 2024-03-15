@@ -1,6 +1,6 @@
 ---
 title: Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
-feature_image: "[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiixXM0imtdkyBvBQRG5oSLEXouTXveD7y2N13pP0l1ObEyBG2bLNr6GIBB0ALPi3WfX4&usqp=CAU](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXJvK8XIyb0Xjrs1VUN4eoYH1v2uaspGNO9-I5G6TM8Qmk7iErBzemNP7zS9XIxO1NMw&usqp=CAU)"
+feature_image: "https://www.world-wide.org/images/dl.jpg"
 
 ---
 
