@@ -5,7 +5,7 @@ author: Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
 
 ---
 <div style="text-align:center">
-    __Keyu Long__, __Tiffany Yu__, __Grace Lam__, __Daniel Shi__, __Licheng Hu__
+    Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
 </div>
 
 ### Introduction
