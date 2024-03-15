@@ -1,6 +1,6 @@
 ---
 title: Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
-feature_image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fclever-ratgeber.de%2Fdifference-between-human-brain-and-neural-network&psig=AOvVaw3vacqBzbaN348lOGORcP_q&ust=1710550084215000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIi77eKF9YQDFQAAAAAdAAAAABAJ"
+feature_image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fclever-ratgeber.de%2Fdifference-between-human-brain-and-neural-network&psig=AOvVaw3vacqBzbaN348lOGORcP_q&ust=1710550084215000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIi77eKF9YQDFQAAAAAdAAAAABAJ"
 ---
 
 ### Introduction
