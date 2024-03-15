@@ -4,6 +4,9 @@ feature_image: "https://www.world-wide.org/images/dl.jpg"
 author: Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
 
 ---
+<div style="text-align:center">
+    Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
+</div>
 
 ### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
