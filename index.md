@@ -4,6 +4,13 @@ feature_image: "https://www.world-wide.org/images/dl.jpg"
 
 ---
 
+### Project Overview
+This capstone project is mentored by Professor Misha Belkin and Professor Yian Ma. 
+
+Our team member:
+
+Keyu Long, Tiffany Yu, Grace Lam, Daniel Shi, Licheng Hu
+
 ### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
 showcasing exceptional problem-solving and data interpretation capabilities. As a neural net-
