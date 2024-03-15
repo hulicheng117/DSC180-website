@@ -95,6 +95,7 @@ performance of neural networks, with a specific focus on the Neural Feature Matr
 and Average Gradient Outer Product (AGOP). The investigation centered on the application
 of these methods to the VGG11 model, trained on a range of datasets from SVHN to Tiny
 ImageNet.
+
 Our findings suggest that the integration of NFM and AGOP with traditional initialization
 methods can lead to substantial improvements in validation accuracy. Notably, the Kaiming
 NFM initialization outperformed standard practices in several datasets, marking a signifi-
