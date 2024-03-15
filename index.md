@@ -75,7 +75,7 @@ method and Kaiming_nfm also outperformed among all initialization methods with K
 
 
 
-### Results and Conclusions
+### Results and Disscussion
 <div style="text-align:center">
       <img width="1060" alt="table" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/bfdd938d-474d-4c0f-869a-bf3f855441a3">
 </div>
@@ -88,6 +88,19 @@ Our initialization methods can be viewed as a soft way of transferring learning.
   - Perform hyperparameter tuning to obtain the best performance of each method.
   - Try to repeat training the model and extracting AGOP/NFM to see if it can improve the performance.
   - Try to expand the method to transformers.
+
+### Conclusion
+In conclusion, our study observed the impact of advanced initialization methods on the
+performance of neural networks, with a specific focus on the Neural Feature Matrix (NFM)
+and Average Gradient Outer Product (AGOP). The investigation centered on the application
+of these methods to the VGG11 model, trained on a range of datasets from SVHN to Tiny
+ImageNet.
+Our findings suggest that the integration of NFM and AGOP with traditional initialization
+methods can lead to substantial improvements in validation accuracy. Notably, the Kaiming
+NFM initialization outperformed standard practices in several datasets, marking a signifi-
+cant step forward in neural network training strategies. The implications of this advance-
+ment are profound, offering potential enhancements in various applications where deep
+learning models are pivotal.
 
 
 ### Acknowledgement and References
