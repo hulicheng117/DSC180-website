@@ -122,12 +122,12 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 
 # 9. Site navigation
 navigation_header:
-- title: Project Home
-   url: /
+# - title: Project Home
+#    url: /
 - title: Github Repo
   url: https://github.com/KULcoder/DSC180
-- title: Team
-  url: /team/
+# - title: Team
+#   url: /team/
 
 # - title: Blog
 #   url: /blog/
